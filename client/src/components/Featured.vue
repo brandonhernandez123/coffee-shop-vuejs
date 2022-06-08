@@ -1,13 +1,14 @@
 <template>
     <div class="featured">
-        <h1 id="featuredtitle">Our Featured items!</h1>
+        <h1 id="featuredtitle">Welcome to Coffee Shop.</h1>
+        <br/>
   <b-carousel
     id="carousel-fade"
     style="text-shadow: 0px 0px 2px #000"
     fade
     indicators
     img-width="1024"
-    img-height="480"
+    img-height="180"
   >
     <b-carousel-slide
       
@@ -40,5 +41,6 @@ export default {
 
 #featuredtitle{
     text-decoration-line: underline;
+    font-size: 80px;
 }
 </style>
