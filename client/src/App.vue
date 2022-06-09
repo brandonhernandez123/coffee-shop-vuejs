@@ -5,10 +5,12 @@
  </header>
  <div class="content">
    <FeaturedComponent />
-   <AboutUs id="about" />
+   <AboutUs id="about" />  
+   <GalleryVue />
    <br/>
    <br/>
   <MenuVue id="menu" />
+
  </div>
  </div>
 </template>
@@ -18,6 +20,7 @@ import NavBar from './components/NavBar.vue'
 import FeaturedComponent from './components/Featured.vue'
 import AboutUs from './components/AboutUs.vue'
 import MenuVue from './components/Menu.vue'
+import GalleryVue from './components/Gallery.vue'
 
 export default {
   name: 'App',
@@ -25,7 +28,8 @@ export default {
    NavBar,
    FeaturedComponent,
   AboutUs,
-  MenuVue
+  MenuVue,
+  GalleryVue
   }
 }
 </script>
