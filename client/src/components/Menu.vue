@@ -5,7 +5,7 @@
         
   <div :key='product.name' class="flip-card-inner">
     <div class="flip-card-front">
-      <img v-bind:src='product.image' v-bind:alt='product.name' style="width:200px;height:225px;" id="productcard">
+      <img v-bind:src='product.image' v-bind:alt='product.name' style="width:280px;height:225px;" id="productcard">
       <h2>{{product.name}}</h2>
     </div>
     <div  class="flip-card-back">
@@ -109,9 +109,11 @@ export default {
 }
 
 #row{
-      display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+ display: grid;
+  row-gap: 50px;
+  grid-template-columns: auto;
+  padding: 10px;
+  margin: 0 auto;
   
 }
 

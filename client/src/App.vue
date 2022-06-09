@@ -6,7 +6,7 @@
  <div class="content">
    <FeaturedComponent />
    <AboutUs id="about" />
-  <MenuVue />
+  <MenuVue id="menu" />
  </div>
  </div>
 </template>
