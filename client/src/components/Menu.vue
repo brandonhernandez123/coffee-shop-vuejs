@@ -20,7 +20,7 @@
 </div>
 <div>
     <h5>Pastries</h5>
-     <div v-for="pastry in pastries" :key="pastry.name" id="row" class="flip-card">
+     <div v-for="pastry in pastries" :key="pastry.name" id="rowpastry" class="flip-card">
         
   <div :key='pastry.name' class="flip-card-inner">
     <div class="flip-card-front">
@@ -161,6 +161,11 @@ export default {
   
   margin: 0 auto;
   
+}
+
+#rowpastry{
+    margin: 0 auto;
+    width: 100%;
 }
 
 
