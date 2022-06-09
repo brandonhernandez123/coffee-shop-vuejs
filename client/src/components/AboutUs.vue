@@ -27,8 +27,9 @@ export default {
 
 <style>
     .about{
-        height: max-content;
+        height: 100%;
         background-color: bisque;
+
     }
 
     #abouttitle{
@@ -47,7 +48,6 @@ export default {
     }
 
     #aboutcol{
-        margin-top: 40px;
         font-stretch: semi-condensed;
         background-color: blanchedalmond;
         

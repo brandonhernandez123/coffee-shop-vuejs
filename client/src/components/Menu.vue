@@ -1,19 +1,21 @@
 <template>
-<div class="row">
-    <div v-for="product in products" :key="product.name" id="column" class="flip-card">
+<b-container fluid class="row">
+    <h1 id='menu'>Menu</h1>
+    <div v-for="product in products" :key="product.name" id="row" class="flip-card">
+        
   <div :key='product.name' class="flip-card-inner">
     <div class="flip-card-front">
       <img v-bind:src='product.image' v-bind:alt='product.name' style="width:200px;height:225px;" id="productcard">
       <h2>{{product.name}}</h2>
     </div>
     <div  class="flip-card-back">
-      <h1>{{product.name}}</h1>
+     
       <p>Ingridients: {{product.recipe}}</p>
       <p>${{product.price}}.00</p>
     </div>
   </div>
 </div>
-</div>
+</b-container>
 </template>
 
 
@@ -60,9 +62,13 @@ export default {
     .flip-card {
   background-color: transparent;
   width: 200px;
-  height: 200px;
+  height: 300px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+#menu{
+    text-decoration-line: underline;
 }
 
 /* This container is needed to position the front and back side */
@@ -102,26 +108,22 @@ export default {
   transform: rotateY(180deg);
 }
 
-#column {
-  /* float: left; */
-  width: 25%;
-  padding: 10px;
+#row{
+      display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* @media (min-width: 600px) {
+  #row { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: max-content;
-  }
-  #productcard{
-      width: 150px;
-  }
-}
+@media (min-width: 900px) {
+  #row { grid-template-columns: repeat(3, 1fr); }
+} */
+
+
+
+
 </style>
