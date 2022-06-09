@@ -1,6 +1,9 @@
 <template>
 <b-container fluid class="row">
     <h1 id='menu'>Menu</h1>
+    <br/>
+    <br/>
+    <h5>Drinks</h5>
     <div v-for="product in products" :key="product.name" id="row" class="flip-card">
         
   <div :key='product.name' class="flip-card-inner">
@@ -14,6 +17,23 @@
       <p>${{product.price}}.00</p>
     </div>
   </div>
+</div>
+<div>
+    <h5>Pastries</h5>
+     <div v-for="pastry in pastries" :key="pastry.name" id="row" class="flip-card">
+        
+  <div :key='pastry.name' class="flip-card-inner">
+    <div class="flip-card-front">
+      <img v-bind:src='pastry.image' v-bind:alt='pastry.name' style="width:280px;height:225px;" id="productcard">
+      <h2>{{pastry.name}}</h2>
+    </div>
+    <div  class="flip-card-back">
+     
+      <p> {{pastry.recipe}}</p>
+      <p>${{pastry.price}}.00</p>
+    </div>
+  </div>
+</div>
 </div>
 </b-container>
 </template>
@@ -53,7 +73,33 @@ export default {
         
         
         
-        ]
+        ],
+        pastries:[
+            {
+                name: 'White Chocolate Walnut Muffins',
+                image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2016%2F09%2Fwhite-chocolate-walnut-muffins-xl-recipe0717.jpg',
+                recipe: 'When white chocolate is baked into a muffin like this one little bits of it get toasty, caramelized and irresistible.',
+                price: 5
+            },
+            {
+                name: 'Fluffy, Buttery Cinnamon Rolls',
+                image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2016%2F10%2FHD-fw200602_cinnamonrolls.jpg',
+                recipe: 'These Fluffy Buttery Cinnamon rolls will have you craving for days on end after you have had your first taste',
+                price: 3
+            },
+            {
+                name: 'Classic Croissants',
+                image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F08%2F21%2Fclassic-croissants-FT-RECIPE0920.jpg',
+                recipe: 'Our Croissants are the best, come in and try yourself and you will be left in awe',
+                price: 2
+            },
+            {
+                name: 'Green Chile Spiced Apple Fritters',
+                image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2019%2F10%2F30%2Ffwcooks_spicedapplefritters_ft_recipe2019_235-2000.jpg',
+                recipe: 'coated with a mixture of green chile powder and sugar.',
+                price: 10
+            }
+            ]
     })
 }
 </script>
@@ -110,20 +156,14 @@ export default {
 
 #row{
  display: grid;
-  row-gap: 50px;
-  grid-template-columns: auto;
-  padding: 10px;
+  row-gap: 80px;
+  grid-template-columns: auto ;
+  
   margin: 0 auto;
   
 }
 
-/* @media (min-width: 600px) {
-  #row { grid-template-columns: repeat(4, 1fr); }
-}
 
-@media (min-width: 900px) {
-  #row { grid-template-columns: repeat(3, 1fr); }
-} */
 
 
 
