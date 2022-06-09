@@ -6,7 +6,7 @@
  <div class="content">
    <FeaturedComponent />
    <AboutUs id="about" />  
-   <GalleryVue />
+   <GalleryVue id="gallery" />
    <br/>
    <br/>
   <MenuVue id="menu" />
@@ -52,6 +52,16 @@ export default {
   padding: 1px 16px;
   
   background-color: #fbeec1;
+}
+
+#about{
+  margin-top: 80px;
+}
+
+#gallery{
+  margin-top: 200px;
+  background-color: #7B3F00;
+  color: white;
 }
 
 
