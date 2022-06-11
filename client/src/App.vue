@@ -10,7 +10,7 @@
    <br/>
    <br/>
   <MenuVue id="menu" />
-
+  <ContactForm id="contact" />
  </div>
  </div>
 </template>
@@ -21,6 +21,7 @@ import FeaturedComponent from './components/Featured.vue'
 import AboutUs from './components/AboutUs.vue'
 import MenuVue from './components/Menu.vue'
 import GalleryVue from './components/Gallery.vue'
+import ContactForm from './components/Contact.vue'
 
 export default {
   name: 'App',
@@ -29,7 +30,8 @@ export default {
    FeaturedComponent,
   AboutUs,
   MenuVue,
-  GalleryVue
+  GalleryVue,
+  ContactForm
   }
 }
 </script>
@@ -43,7 +45,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #fbeec1;
+  background-color: #B18F6A;
   height: 100%;
 }
 
@@ -62,6 +64,10 @@ export default {
   margin-top: 200px;
   background-color: #7B3F00;
   color: white;
+}
+
+#contact{
+  margin-top: 250px;
 }
 
 
