@@ -176,9 +176,7 @@ export default {
 }
 
 #row{
- display: grid;
-  row-gap: 80px;
-  grid-template-columns: auto ;
+    width: 100%;
   
   margin: 0 auto;
   
