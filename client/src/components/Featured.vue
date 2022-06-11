@@ -19,7 +19,7 @@
       img-src="https://i.imgur.com/7kqOSEQ.png"
     ></b-carousel-slide>
     <b-carousel-slide
-      caption="Croissants?"
+      caption="our signature Croissants will brighten your day in 2.5 seconds"
       img-src="https://i.imgur.com/7O99A89.png"
     ></b-carousel-slide>
   </b-carousel>
