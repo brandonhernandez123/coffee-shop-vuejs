@@ -2,7 +2,7 @@
     <b-container fluid>
        
  <div class="wrapper">
-    <form class="form">
+    <form v-on:submit="onSubmit" class="form">
       <div class="pageTitle title">Contact Us! </div>
       <div class="secondaryTitle title">Please fill this form to reach out to us!</div>
       <input type="text" class="name formEntry" placeholder="Name" />
@@ -23,7 +23,12 @@
 
 <script>
 export default {
-    name: 'ContactForm'
+    name: 'ContactForm',
+    methods:{
+        onSubmit () {
+            alert('Message sent, stop by and get a coffee while we review your message ')
+        }
+    }
 }
 </script>
 
@@ -33,18 +38,7 @@ export default {
 #title-Tag-Line {
   font-size: 20px;
 }
-/* .card-item__bg{
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  display: block;
-  position: relative;
-  margin: 30px auto;
-  transform: translate(0px, 50px);
-  z-index: 5;
-} */
+
 
 /* form animation starts */
 .form {
@@ -90,11 +84,12 @@ export default {
 .name {
   background-color: black;
   color: white;
+  
 }
 .name:hover {
   border-bottom: 5px solid tan;
   height: 30px;
-  width: 380px;
+  
   transition: ease 0.5s;
 }
 
@@ -102,6 +97,7 @@ export default {
   background-color: black;
   color: white;
   height: 2em;
+  max-width: 280px;
 }
 
 .email:hover {

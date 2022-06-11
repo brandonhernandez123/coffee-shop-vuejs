@@ -11,7 +11,13 @@
    <br/>
   <MenuVue id="menu" />
   <ContactForm id="contact" />
+  <br>
+  <footer>
+   <FooterVue id="footer" />
+ </footer>  
  </div>
+
+ 
  </div>
 </template>
 
@@ -22,6 +28,8 @@ import AboutUs from './components/AboutUs.vue'
 import MenuVue from './components/Menu.vue'
 import GalleryVue from './components/Gallery.vue'
 import ContactForm from './components/Contact.vue'
+import FooterVue from './components/Footer.vue'
+
 
 export default {
   name: 'App',
@@ -31,7 +39,8 @@ export default {
   AboutUs,
   MenuVue,
   GalleryVue,
-  ContactForm
+  ContactForm,
+  FooterVue
   }
 }
 </script>
@@ -69,6 +78,18 @@ export default {
 #contact{
   margin-top: 250px;
 }
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #7B3F00;
+  color: white;
+  text-align: center;
+}
+
 
 
 
